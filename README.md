@@ -1,2 +1,2 @@
 # RecyclingBins
-智能垃圾回收箱
+ASTO智能垃圾回收箱
