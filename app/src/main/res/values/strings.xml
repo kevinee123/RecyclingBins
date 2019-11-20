@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">AutoWeigh</string>
+    <string name="app_name">智能垃圾回收箱</string>
+
+    <!--串口-->
+    <string name="open_serial_port_success">打开串口成功</string>
+    <string name="open_serial_port_fail">打开串口失败</string>
+    <string name="mo_read_write_permissions">没有读写权限</string>
+    <string name="doSuccess">操作成功</string>
+    <string name="door_have_foreign_matter">投递门有异物</string>
+    <string name="open_delivery_door_overtime">开垃圾投递门电机超时</string>
+    <string name="close_delivery_door_overtime">关垃圾投递门电机超时</string>
+    <string name="delivery_door_locked_rotor">投递门电机堵转</string>
+    <string name="eeprom_no_init">eeprom没有初始化</string>
+    <string name="weight_instability">连续读数变化超过5g</string>
+    <string name="command_type_error">命令类型错误</string>
+    <string name="device_is_null">device为空</string>
 </resources>

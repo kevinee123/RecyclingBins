@@ -22,6 +22,7 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
         mavenCentral()
         maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
     }
 }
 
