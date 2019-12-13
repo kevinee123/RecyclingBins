@@ -3,10 +3,11 @@ package com.asto.recyclingbins.core
 class Common {
     //常量字段定义在里面
     companion object {
-        const val APP_NAME = "autoWeigh"
+        const val APP_NAME = "RecyclingBins"
         const val BASE_URL = "http://test.money.golden-navi.com"//测试地址
-        const val HTTP_SUCCESS = 0
-        const val HTTP_LOGIN_OUT = 120
+        const val HTTP_SUCCESS = 0 //网络请求成功
+        const val HTTP_LOGIN_OUT = 120//网络请求失败
+
 
         /**
          * 百度语音
@@ -14,6 +15,13 @@ class Common {
         const val BD_APP_ID = "17770013"
         const val BD_APP_KEY = "NAez1zEXm0mbSiDBth6AosFs"
         const val BD_APP_SECRET = "lHS6X7X9TZkztf6zUjvTYpHh3vyAu50P"
+
+        /**
+         * EventBus
+         */
+        const val EB_CODE_MAIN_SELECT_TYPE = "EB_CODE_MAIN_SELECT_TYPE"// 已登录 跳转主页 选择类型
+        const val EB_CODE_MAIN_FINISH = "EB_CODE_MAIN_FINISH"//用户操作完成 退出登录
+        const val EB_CODE_CAPTURE_PICTURE_SUCCESS = "capturePictureSuccess"//抓拍成功
 
         /**
          * 回收箱控制指令

@@ -3,7 +3,7 @@ package com.asto.recyclingbins.receiver
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.asto.recyclingbins.view.DemoActivity
+import com.asto.recyclingbins.mvp.view.DemoActivity
 
 /**
  * Created by nxk on 2019/11/14.

@@ -8,4 +8,5 @@ interface IPresenter<V>{
         get() = RetrofitUtil.getRetrofit().create(ApiModel::class.java)
     val view : V
 
+    fun showView()
 }

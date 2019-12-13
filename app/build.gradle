@@ -12,21 +12,41 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    if (!variant.buildType.isDebuggable()) {
+                        // 获取签名的名字 variant.signingConfig.name
+                        // 要被替换的源字符串
+                        def sourceFile = "app-release"
+                        // 替换的字符串
+                        def replaceFile = "recyclingBins_V${variant.versionName}_(${releaseTime()})"
+                        outputFileName = output.outputFile.name.replace(sourceFile, replaceFile)
+                    }
+                }
+            }
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
     }
 }
-
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -35,6 +55,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // Anko 携程扩展（startActivity更方便）
+    implementation 'org.jetbrains.anko:anko-sdk15-coroutines:0.10.8'
+    implementation 'org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8'
     //loadingDialog
     implementation 'com.github.gittjy:LoadingDialog:1.0.2'
     //Logger
@@ -60,5 +83,10 @@ dependencies {
     implementation 'com.github.jiangdongguo:AndroidUSBCamera:2.3.1'
     //zxing二维码
     implementation 'cn.yipianfengye.android:zxing-library:2.2'
-
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+}
+// 获取日期方法
+def releaseTime() {
+    return new Date().format("yyMMdd_HHmm")
 }

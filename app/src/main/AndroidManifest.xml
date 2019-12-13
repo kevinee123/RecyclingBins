@@ -30,13 +30,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".view.DemoActivity">
+        <activity android:name="com.asto.recyclingbins.mvp.view.DemoActivity">
+        </activity>
+        <activity android:name="com.asto.recyclingbins.mvp.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".mvp.view.LoginActivity" />
+        <activity android:name=".mvp.view.DeliverActivity" />
+        <activity android:name=".mvp.view.RecognitionActivity" />
+        <activity android:name=".mvp.view.NoRecognitionActivity" />
+        <activity android:name=".mvp.view.SettlementListActivity" />
+
         <receiver android:name=".receiver.BootReceiver">
             <intent-filter>
 

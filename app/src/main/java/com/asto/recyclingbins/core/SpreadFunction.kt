@@ -77,6 +77,29 @@ fun px2dp(context: Context, pxValue: Int): Int {
         .toInt()
 }
 
+/**
+ * 获取设备序列号
+ *
+ * @return 设备序列号
+ */
+@SuppressLint("PrivateApi")
+fun getSerialNumber() :String {
+    var serial = ""
+    try {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+            //8.0+
+            serial = Build.SERIAL
+        } else {
+            //8.0-
+            val c = Class.forName("android.os.SystemProperties")
+            val get = c.getMethod("get", String::class.java)
+            serial = get.invoke(c, "ro.serialno") as String
+        }
+    } catch (e : Exception ) {
+        e.printStackTrace()
+    }
+    return serial
+}
 
 //显示系统虚拟按键
 fun Activity.toSystemShowSetting(){

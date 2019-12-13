@@ -14,4 +14,31 @@
     <string name="weight_instability">连续读数变化超过5g</string>
     <string name="command_type_error">命令类型错误</string>
     <string name="device_is_null">device为空</string>
+    <string name="device_no">设备编号：%s</string>
+    <string name="service_hotline">全国服务热线：%s</string>
+
+    <!--错误信息-->
+    <string name="msg_error_recycing_bins_full">回收箱已满</string>
+    <string name="msg_error_equipment_failure">设备故障</string>
+    <string name="pls_scan_qr_code">请扫码开箱</string>
+    <string name="pls_open_wechat_scan">打开微信扫一扫</string>
+    <string name="title_deliver">箱门已打开\n请投递</string>
+    <string name="delivery_completed">投递完成</string>
+    <string name="msg_deliver">纸箱这样投，可以减少空间浪费</string>
+    <string name="deliver_step_1">1.折叠纸箱</string>
+    <string name="deliver_step_2">2.平整放入</string>
+    <string name="title_recognition">识别到\n以下回收物</string>
+    <string name="finish_deliver">结束投递</string>
+    <string name="continue_deliver">继续投递</string>
+    <string name="title_no_recognition">未识别到\n回收物品</string>
+    <string name="msg_is_continue_deliver">是否继续投递?</string>
+    <string name="deliver_detail">本次投递详情</string>
+    <string name="deliver_success">投递成功！</string>
+    <string name="msg_integral_total">积分合计</string>
+    <string name="unit_weight">KG</string>
+    <string name="integral">积分</string>
+    <string name="speak_msg_no_recognition">未识别到回收物，是否继续投递</string>
+    <string name="speak_msg_pls_login">请扫码开箱</string>
+    <string name="speak_msg_door_open">箱门已打开，请投递</string>
+    <string name="speak_msg_door_close">箱门正在关闭</string>
 </resources>

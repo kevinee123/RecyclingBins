@@ -4,5 +4,16 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="white">#ffffffff</color>
+    <color name="bg_nomore">#fafafa</color>
     <color name="black">#000000</color>
+    <color name="black_333333">#333333</color>
+
+    <color name="gray_a2a2a2">#A2A2A2</color>
+    <color name="gray_7E7E7E">#7E7E7E</color>
+
+    <color name="red_f00000">#f00000</color>
+
+    <color name="orange_E44D26">#E44D26</color>
 </resources>
+
